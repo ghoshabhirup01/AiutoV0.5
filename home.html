@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html >
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="description" content="">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:700,400">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/socicon.min.css">
+  <link rel="stylesheet" href="assets/files/css/style.css">
+  <link rel="stylesheet" href="assets/files/css/mbr-additional.css" type="text/css">
+  <link rel="shortcut icon" href="assets/images/logo.png" />
+
+
+
+
+</head>
+<body>
+<section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted" id="header4-i" data-rv-view="38" style="background-color: rgb(39, 177, 75);">
+    <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-center">
+
+        <div class="mbr-box__container mbr-section__container container">
+            <div class="mbr-box mbr-box--stretched"><div class="mbr-box__magnet mbr-box__magnet--center-center">
+                <div class="row"><div class=" col-sm-8 col-sm-offset-2">
+                    <div class="mbr-hero animated fadeInUp">
+                        <h1 class="mbr-hero__text">Welcome to Aiuto</h1>
+                        <p class="mbr-hero__subtext">Aiuto helps students connect to NGOs near them. It helps them apply their knowledge in a real working environment. We aim to bridge the gap between the student and the NGO by providing them &nbsp;with easy search and interaction&nbsp;facilities. This is the alpha version, and we would love your feedback.&nbsp;</p>
+                    </div>
+                    <div class="mbr-buttons btn-inverse mbr-buttons--center"><a class="mbr-buttons__btn btn btn-lg animated fadeInUp delay btn-success" href="index.html#form1-h">CONTINUE</a> </div>
+                </div></div>
+            </div></div>
+        </div>
+
+    </div>
+</section>
+
+<section class="engine"><a>bootstrap carousel</a></section><section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form1-h" data-rv-view="41" style="background-color: rgb(190, 231, 199);">
+
+    <div class="mbr-section__container mbr-section__container--std-padding container" style="padding-top: 93px; padding-bottom: 93px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="mbr-header mbr-header--center mbr-header--std-padding">
+                            <h2 class="mbr-header__text">FIND NGOs NEAR ME</h2>
+                        </div>
+
+                        <form id="formContact" method="post">
+
+                            <div class="form-group">
+                                <input id="nameuser" type="text" class="form-control" name="name" required="" placeholder="Name*">
+                            </div>
+                            <div class="form-group">
+                                <input id="emailiduser" type="email" class="form-control" name="email" required="" placeholder="Email*">
+                            </div>
+                            <div class="form-group">
+                                <input id="tel" type="text" class="form-control" name="phone" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <input id="schooluser" type="text" class="form-control" name="school" required="" placeholder="School*">
+                            </div>
+                            <div class="form-group">
+                                <input id="gradeuser" type="text" class="form-control" name="grade" placeholder="Grade*">
+                            </div>
+                            <div class="mbr-buttons mbr-buttons--right"><button type="submit" class="mbr-buttons__btn btn btn-lg btn-success" >CONTINUE</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section mbr-section--relative mbr-section--short-paddings" id="msg-box2-k" data-rv-view="50" style="background-color: rgb(255, 255, 255);">
+
+
+
+    <div class="mbr-section__container mbr-section__container--isolated container" style="padding-top: 60px; padding-bottom: 60px;">
+        <div class="row">
+            <div class="mbr-box mbr-box--fixed mbr-box--adapted">
+                <div class="mbr-box__magnet mbr-box__magnet--top-left mbr-section__left col-sm-8">
+                    <div class="mbr-section__container">
+                        <div class="mbr-header mbr-header--auto-align mbr-header--wysiwyg">
+                            <h3 class="mbr-header__text">LOOKING TO BE A PARTNER NGO?</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mbr-box__magnet mbr-box__magnet--top-left mbr-section__right col-sm-4">
+                    <div class="mbr-section__container">
+                        <div class="mbr-buttons mbr-buttons--auto-align mbr-buttons--top mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-success" href="https://goo.gl/forms/aVd6aNDVg0fveaq13">REGISTER HERE</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="social-buttons1-j" data-rv-view="53" style="background-color: rgb(255, 255, 255);">
+
+
+    <div class="mbr-section__container container">
+        <div class="mbr-header mbr-header--inline row" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+            <div class="col-sm-4">
+                <h3 class="mbr-header__text">SHARE THIS PAGE!</h3>
+            </div>
+            <div class="mbr-social-icons col-sm-8">
+                <div class="mbr-social-likes social-likes_style-1" data-counters="true">
+                    <div class="mbr-social-icons__icon social-likes__icon facebook socicon-bg-facebook" title="Share link on Facebook">
+                        <i class="socicon socicon-facebook"></i>
+
+                    </div>
+                    <div class="mbr-social-icons__icon social-likes__icon plusone socicon-bg-googleplus" title="Share link on Google+">
+                        <i class="socicon socicon-googleplus"></i>
+
+                    </div>
+                    <div class="mbr-social-icons__icon social-likes__icon twitter socicon-bg-twitter" title="Share link on Twitter">
+                        <i class="socicon socicon-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-g" data-rv-view="55" style="background-color: rgb(65, 168, 95);">
+
+    <div class="mbr-section__container container">
+        <div class="mbr-footer mbr-footer--wysiwyg row" style="padding-top: 36.9px; padding-bottom: 36.9px;">
+            <div class="col-sm-12">
+                <p class="mbr-footer__copyright"></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <!--[if lte IE 9]>
+    <script src="assets/jquery-placeholder/jquery.placeholder.min.js"></script>
+  <![endif]-->
+  <script src="assets/social-likes/social-likes.js"></script>
+  <script src="assets/files/js/script.js"></script>
+
+
+</body>
+</html>
