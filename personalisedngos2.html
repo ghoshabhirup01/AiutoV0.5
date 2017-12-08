@@ -104,8 +104,8 @@
     <div class="mbr-section__container container mbr-section__container--isolated">
         <div class="mbr-header mbr-header--wysiwyg row">
             <div class="col-sm-8 col-sm-offset-2">
-                <h3 class="mbr-header__text">THE NGO closest to your current location:</h3>
-                <h3 id="printNGO1" class="mbr-header__text"></h3>
+                <h3 class="mbr-header__text">THE NGOs closest to your current location:</h3>
+                <h3 id="printNGO1" class="mbr-header__text">Please enable location services.</h3>
                 <h3 id="printNGO2" class="mbr-header__text"></h3>
                 <h3 id="printNGO3" class="mbr-header__text"></h3>
             </div>
@@ -155,43 +155,8 @@ function NearestCity(latitude, longitude, locations) {
 
   // return the nearest location
   var closestLocation = (locations[closest]);
-  document.getElementById("printNGO1").innerHTML = closestLocation[0];
-  return closestLocation;
-}
-function TwoNearestCity(latitude, longitude, locations) {
-  var mindif=99999;
-  var closest;
-  var twoclosest;
-  var threeclosest;
 
-  for (index = 0; index < locations.length; ++index) {
-    var dif =  PythagorasEquirectangular(latitude, longitude, locations[ index ][ 1 ], locations[ index ][ 2 ]);
-    if ( dif < mindif ) {
-      closest=index;
-      mindif = dif;
-    }
-  }
 
-  // return the nearest location
-  var closestLocation = (locations[closest]);
-
-  return closestLocation;
-}
-function ThreeNearestCity(latitude, longitude, locations) {
-  var mindif=99999;
-  var closest;
-
-  for (index = 0; index < locations.length; ++index) {
-    var dif =  PythagorasEquirectangular(latitude, longitude, locations[ index ][ 1 ], locations[ index ][ 2 ]);
-    if ( dif < mindif ) {
-      closest=index;
-      mindif = dif;
-    }
-  }
-
-  // return the nearest location
-  var closestLocation = (locations[closest]);
-  console.log('The closest location is ' + closestLocation[2]);
   return closestLocation;
 }
 // get our three parameters ready
@@ -216,11 +181,21 @@ if (navigator.geolocation) {
 
     // in this case I just want the name of the city, so I'm storing the returned value into a variable
     var usersCity = NearestCity(lng, lat, cities);
-    var usersTwoCity = TwoNearestCity(lng,lat,cities);
-    var usersThreeCity = ThreeNearestCity(lng,lat,cities);
-    console.log(usersCity[0])
-    console.log(usersTwoCity[0])
-    console.log(usersThreeCity[0])
+    var index = cities.indexOf(usersCity);
+    console.log(usersCity)
+    document.getElementById("printNGO1").innerHTML = usersCity[0];
+    cities.splice(index,1)
+    var secondCity = NearestCity(lng, lat, cities);
+    var index2 = cities.indexOf(secondCity);
+    console.log(secondCity)
+    document.getElementById("printNGO2").innerHTML = secondCity[0];
+    cities.splice(index2,1)
+    var thirdCity = NearestCity(lng, lat, cities);
+    var index3 = cities.indexOf(thirdCity);
+    console.log(thirdCity)
+    document.getElementById("printNGO3").innerHTML = thirdCity[0];
+    cities.splice(index3,1)
+    console.log(cities)
 
     // I want to keep this value for when the user returns to the site or app
     window.localStorage.usersLocation = usersCity[0];
